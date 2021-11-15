@@ -6,6 +6,16 @@
 
     <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-md-10 col-lg-8 col-xl-7">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul class="flashes">
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
             <p>Looking to reach us? Please fill out the form below</p>
             <div class="my-5">
                 <!-- * * * * * * * * * * * * * * *-->
