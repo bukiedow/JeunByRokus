@@ -23,13 +23,13 @@ def about():
 def contact():
     if request.method == "POST":
         flash("Thanks {}, we have received your message!".format(
-            request.form.get("name"))).")
+            request.form.get("name")))
     return render_template("contact.html", page_title="Contact Us")
 
 
 @app.route("/recipes")
 def recipes():
-     return render_template("recipes.html", page_title="Recipes")
+    return render_template("recipes.html", page_title="Recipes")
 
 
 if __name__ == "__main__":
